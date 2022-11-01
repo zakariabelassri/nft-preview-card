@@ -47,8 +47,6 @@ Writing HTML and CSS using BEM naming
 
 Creating states for intractive using CSS pseudo-class :hover
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
 ### Useful resources
 
 - [CSS Reference - Pseudo-class :hover](https://tympanus.net/codrops/css_reference/hover/) - Helpful css reference to learn and practice hover pseudo-class.
