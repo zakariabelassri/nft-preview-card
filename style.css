@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --t-font-size: 1.375rem;
+  --p-font-size: 1.125rem;
+  --main-bg-color: hsl(217, 54%, 11%);
+  --card-bg-color: hsl(216, 50%, 16%);
+  --line-color: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --attribution-color: hsl(228, 45%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--main-bg-color);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+}
+
+.card {
+  background: var(--card-bg-color);
+  max-width: 350px;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.card__image {
+  position: relative;
+  width: 100%;
+}
+
+.card__image--main {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.card__image--cyan-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: var(--cyan);
+  border-radius: 10px;
+}
+
+.card__image--view-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+}
+
+.card__image:hover .card__image--cyan-bg {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.card__image:hover .card__image--cyan-bg + .card__image--view-icon {
+  display: block;
+}
+
+.card__title {
+  color: var(--white);
+  font-weight: 600;
+  font-size: var(--t-font-size);
+  padding: 24px 0;
+}
+
+.card__title:hover,
+.card--name:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.card__description {
+  color: var(--soft-blue);
+  font-weight: 300;
+  font-size: var(--p-font-size);
+}
+
+.card__detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.card__detail--price-logo,
+.card__detail--time-logo {
+  margin-right: 5px;
+}
+
+.card__detail--price {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.card__detail--time {
+  color: var(--soft-blue);
+  font-weight: 300;
+}
+
+.card__line {
+  height: 1px;
+  background: var(--line-color);
+  padding: 0;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 10px;
+}
+
+.card__avatar {
+  width: 32px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 100%;
+  border-color: var(--white);
+  margin-right: 14px;
+}
+
+.card__creation {
+  color: var(--soft-blue);
+}
+
+.card--name {
+  color: var(--white);
+  text-decoration: none;
+}
+
+footer {
+  color: var(--soft-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--attribution-color);
+}
